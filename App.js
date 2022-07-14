@@ -1,4 +1,4 @@
-import React,{useState} from "react"
+import React,{useState,useEffect} from "react"
 import Note from "./components/Note"
 export default function App({note}){
   const [notes,setNotes]=useState(note)
@@ -11,7 +11,6 @@ export default function App({note}){
   }
     return (
     <div>
-      {console.log(notes)}
       <h1>Notes</h1>
       <button onClick={()=>setShowAll(!showAll)}>show {showAll?'important':'all'}</button>
      <Note note={noteToShow}/>
